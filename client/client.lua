@@ -13,7 +13,7 @@ local isActive = false
 function SpawnFlare()
     if not isActive then
         RequestFlareModel()
-        local obj = CreateObject(modelHash, GetEntityCoords(PlayerPedId())+vec3(0,0,1.0), true, false, false)
+        local obj = CreateObject(modelHash, GetEntityCoords(PlayerPedId()), true, false, false)
         while not DoesEntityExist(obj) do
             Wait(0)
         end
